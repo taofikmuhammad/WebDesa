@@ -37,6 +37,12 @@ $routes->set404Override();
 // route since we don't have to scan directories.
 $routes->get('/', 'Home::index');
 
+$routes->add('/login', 'Auth::index');
+$routes->post('/auth/prosesLogin', 'Auth::prosesLogin');
+$routes->get('/auth/logout', 'Auth::logout');
+
+$routes->get('/beranda', 'Home::index');
+
 /*
  * --------------------------------------------------------------------
  * Additional Routing
